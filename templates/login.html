@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    {% with messages = get_flashed_messages() %}
+        {% for i in messages %}
+            {% if i %}
+                {{i}}<br>
+            {% endif %}
+        {% endfor %}
+    {% endwith %}
+
+    <form action="/login" method="post">
+        {% if error %}
+            <strong>Error:{{error}}</strong>
+        {% endif %}
+        <label for="username">UserName</label>
+        <input type="text" name="username" id="username"><br>
+        <label for="pas">Password</label>
+        <input type="password" name="pas" id=pas><br>
+        <input type="reset"><br>
+        <input type="submit">
+    </form>
+    <p><a href="/register">create new account</a></p>
+</body>
+</html>

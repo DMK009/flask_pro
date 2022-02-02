@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Regiatration Form</h2>
+   <form action="/register" method="post">
+       {% if error %}
+       <strong>Error:{{error}}</strong>
+       {% endif %}
+       <p>FirstName<input type="text" name="fname"></p>
+
+       <p>SurName<input type="text" name="sname"></p>
+
+       <p>Gender</p>
+       <!-- <select id="g" name="gender">
+        <option value="male">Male</option>
+        <option value="fmale">Female</option>
+    </select></p> -->
+       <input type="radio" id="male" name="gender" value="MALE">
+       <label for="male">Male</label><br>
+       <input type="radio" id="female" name="gender" value="FEMALE">
+       <label for="female">Female</label><br>
+
+       <p><label for="phone">PhoneNumber</label>
+       <input type="number" name="phone" id="phone"></p>
+       
+       <p><label for="address">Address</label>
+        <textarea name="address" id="address" cols="30" rows="10"></textarea></p>
+
+       <p><label for="tech">Intrested Technology</label>
+       <select id="tech" name="tech">
+           <option value="python">PYTHON</option>
+           <option value="java">JAVA</option>
+           <option value="php">PHP</option>
+       </select></p>
+
+       <p><label for="qulification">High Qulification</label>
+       <select id="qulification" name="qulification">
+           <option value="btech">B.Tech</option>
+           <option value="mtech">M.Tech</option>
+       </select></p>
+
+       <p><label for="email">Email</label>
+       <input type="email" name="email" id="email"></p>
+
+       <p><label for="userid">CreateUserId</label>
+       <input type="text" id="userid" name="userid"></p>
+
+       <p><label for="pass1">CreatePassword</label>
+       <input type="password" name="pass1" id="pass1"></p>
+
+       <p><label for="pass2">Re-enterpassword</label>
+       <input type="password" name="pass2" id="pass1"></p>
+
+       <input type="reset">
+       <input type="submit">
+
+
+
+    </form> 
+</body>
+</html>
